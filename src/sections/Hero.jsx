@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-            Hi, I’m SamixTech — a passionate Software Engineer from Ondo, Nigeria.
+            Hi, I’m SamixTech (Samson .O) — a passionate Software Engineer from Ondo, Nigeria.
              My journey started with a deep curiosity for tech and creativity, which 
              led me into Frontend Development, 
             then expanded into Fullstack Engineering, video editing, and design.

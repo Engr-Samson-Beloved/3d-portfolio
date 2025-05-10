@@ -53,8 +53,7 @@ const AppShowcase = () => {
             </div>
             <div className="text-content">
               <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called SkoolConnectNG
+                Overview Of My Recent Project In Development Environment
               </h2>
               <p className="text-white-50 md:text-xl">
                 An app built with NextJs Capacitor, Expo, & TailwindCSS for a fast,
@@ -81,6 +80,28 @@ const AppShowcase = () => {
               <h2>YC Directory - A Startup Showcase App</h2>
             </div>
           </div>
+          
+
+          <div className="project-list-wrapper overflow-hidden">
+            <div className="project" ref={libraryRef}>
+              <div className="image-wrapper bg-[#FFEFDB]">
+                <img
+                  src="/images/project2.png"
+                  alt="Library Management Platform"
+                />
+              </div>
+              <h2>Student MailChat</h2>
+            </div>
+
+            <div className="project" ref={ycDirectoryRef}>
+              <div className="image-wrapper bg-[#FFE7EB]">
+                <img src="/images/project3.png" alt="YC Directory App" />
+              </div>
+              <h2></h2>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
