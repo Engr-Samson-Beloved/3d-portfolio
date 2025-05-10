@@ -79,14 +79,14 @@ const AppShowcase = () => {
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img
-                  src="/images/project2.png"
+                  src="/images/thrive.PNG"
                   alt="Library Management Platform"
                 />
               </div>
               <div className="flex justify-between items-center w-full">
                 <h2>The Thrive Africa</h2>
                 <button 
-                  onClick={() => openProject('/projects/thrive-africa')}
+                  onClick={() => openProject('http://thriveafrica.vercel.app/')}
                   className="px-4 py-1 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
                 >
                   View
@@ -121,7 +121,7 @@ const AppShowcase = () => {
               <div className="flex justify-between items-center w-full">
                 <h2>Student MailChat</h2>
                 <button 
-                  onClick={() => openProject('/projects/student-mailchat')}
+                  onClick={() => openProject('nigerchat.vercel.app')}
                   className="px-4 py-1 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
                 >
                   View
