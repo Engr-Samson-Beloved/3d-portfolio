@@ -27,7 +27,13 @@ const Hero = () => {
   });
 
   const downloadResume = () => {
-    window.open('/resume.pdf', '_blank');
+    // Create an anchor element to trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'SamixTech_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -83,12 +89,13 @@ const Hero = () => {
                     <p className="text-white-50 text-sm">Fullstack Engineer</p>
                     <button 
                       onClick={downloadResume}
-                      className="resume-btn flex items-center gap-1 mt-2 px-3 py-1 bg-white bg-opacity-10 rounded-md border border-white/20 hover:bg-opacity-20 transition-all w-fit"
+                      className="resume-btn flex items-center gap-1 mt-2 px-3 py-1 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-md border border-white/30 hover:border-white/50 hover:shadow-sm hover:shadow-purple-500/20 transition-all w-fit"
+                      aria-label="Download Resume"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
-                      <span className="text-white-50 text-xs">Resume</span>
+                      <span className="text-white font-medium text-xs">Download CV</span>
                     </button>
                   </div>
                 </div>
@@ -105,19 +112,22 @@ const Hero = () => {
             <div className="flex items-center gap-4 mt-2">
               <Button
                 text="See My Work"
-                className="md:w-60 md:h-14 w-48 h-12"
+                className="md:w-60 md:h-14 w-48 h-12 relative overflow-hidden group"
                 id="counter"
-              />
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+              </Button>
               
               {/* Desktop Resume Button - hidden on mobile */}
               <button 
                 onClick={downloadResume}
-                className="resume-btn hidden md:flex items-center gap-2 px-6 py-3 bg-white bg-opacity-10 backdrop-blur-sm rounded-md border border-white-50 hover:bg-opacity-20 transition-all"
+                className="resume-btn hidden md:flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-md border border-white/30 hover:border-white/50 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
+                aria-label="Download Resume"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white group-hover:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                <span className="text-white-50">Resume</span>
+                <span className="text-white font-medium">Resume</span>
               </button>
             </div>
           </div>
