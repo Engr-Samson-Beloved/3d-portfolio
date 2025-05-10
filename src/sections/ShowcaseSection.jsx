@@ -22,7 +22,7 @@ const AppShowcase = () => {
     );
 
     // Animations for each app showcase
-    const cards = [rydeRef.current, libraryRef.current, ycDirectoryRef.current];
+    const cards = [rydeRef.current, libraryRef.current, ycDirectoryRef.current, SMC.current, AICHAT.current];
 
     cards.forEach((card, index) => {
       gsap.fromTo(
@@ -45,6 +45,11 @@ const AppShowcase = () => {
     });
   }, []);
 
+  // Function to open project in a new window/tab
+  const openProject = (url) => {
+    window.open(url, '_blank');
+  };
+
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
@@ -61,6 +66,12 @@ const AppShowcase = () => {
                 An app built with NextJs Capacitor, Expo, & TailwindCSS for a fast,
                 user-friendly experience.
               </p>
+              <button 
+                onClick={() => openProject('/projects/ryde')}
+                className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+              >
+                View Project
+              </button>
             </div>
           </div>
 
@@ -72,18 +83,33 @@ const AppShowcase = () => {
                   alt="Library Management Platform"
                 />
               </div>
-              <h2>The Thrive Africa</h2>
+              <div className="flex justify-between items-center w-full">
+                <h2>The Thrive Africa</h2>
+                <button 
+                  onClick={() => openProject('/projects/thrive-africa')}
+                  className="px-4 py-1 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
+                >
+                  View
+                </button>
+              </div>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src="/images/project3.png" alt="YC Directory App" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <div className="flex justify-between items-center w-full">
+                <h2>YC Directory - A Startup Showcase App</h2>
+                <button 
+                  onClick={() => openProject('/projects/yc-directory')}
+                  className="px-4 py-1 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
+                >
+                  View
+                </button>
+              </div>
             </div>
           </div>
           
-
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={SMC}>
               <div className="image-wrapper bg-[#FFEFDB]">
@@ -92,18 +118,32 @@ const AppShowcase = () => {
                   alt="Library Management Platform"
                 />
               </div>
-              <h2>Student MailChat</h2>
+              <div className="flex justify-between items-center w-full">
+                <h2>Student MailChat</h2>
+                <button 
+                  onClick={() => openProject('/projects/student-mailchat')}
+                  className="px-4 py-1 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
+                >
+                  View
+                </button>
+              </div>
             </div>
 
             <div className="project" ref={AICHAT}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src="/images/aichat.png" alt="YC Directory App" />
               </div>
-              <h2></h2>
+              <div className="flex justify-between items-center w-full">
+                <h2>AI Chat Application</h2>
+                <button 
+                  onClick={() => openProject('/projects/ai-chat')}
+                  className="px-4 py-1 bg-blue-500 text-white text-sm rounded-md hover:bg-blue-600 transition-colors"
+                >
+                  View
+                </button>
+              </div>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
