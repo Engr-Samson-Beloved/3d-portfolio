@@ -51,12 +51,14 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Samson, a developer based in Nigeria with a passion for
-              code.
+            Hi, I’m SamixTech — a passionate Software Engineer from Ondo, Nigeria.
+             My journey started with a deep curiosity for tech and creativity, which 
+             led me into Frontend Development, 
+            then expanded into Fullstack Engineering, video editing, and design.
             </p>
 
             <Button
-              text="See My Work"
+              text="See My Workflow"
               className="md:w-80 md:h-16 w-60 h-12"
               id="counter"
             />
