@@ -10,6 +10,8 @@ const AppShowcase = () => {
   const rydeRef = useRef(null);
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
+  const SMC = useRef(null);
+  const AICHAT = useRef(null);
 
   useGSAP(() => {
     // Animation for the main section
@@ -83,7 +85,7 @@ const AppShowcase = () => {
           
 
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={libraryRef}>
+            <div className="project" ref={SMC}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img
                   src="/images/project2.png"
@@ -93,9 +95,9 @@ const AppShowcase = () => {
               <h2>Student MailChat</h2>
             </div>
 
-            <div className="project" ref={ycDirectoryRef}>
+            <div className="project" ref={AICHAT}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+                <img src="/images/aichat.png" alt="YC Directory App" />
               </div>
               <h2></h2>
             </div>
