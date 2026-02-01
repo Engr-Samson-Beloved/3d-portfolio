@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 const Footer = () => {
   // Social links data with URLs
   const socialLinks = [
-    { imgPath: socialImgs[0].imgPath, url: "https://twitter.com/yourusername" },
-    { imgPath: socialImgs[1].imgPath, url: "https://linkedin.com/in/yourusername" },
-    { imgPath: socialImgs[2].imgPath, url: "https://github.com/yourusername" },
+    { imgPath: socialImgs[0].imgPath, url: "https://www.instagram.com/style_withtife1/" },
+    { imgPath: socialImgs[1].imgPath, url:  "https://github.com/emmy1472"},
+    { imgPath: socialImgs[2].imgPath, url: "https://x.com/emmycrushh" },
     // Add more as needed
   ];
 
@@ -44,7 +44,7 @@ const Footer = () => {
           
           {/* WhatsApp Icon with Animation */}
           <a 
-            href="http://wa.me/+2348116060517" 
+            href="http://wa.me/+2349169771575" 
             target="_blank" 
             rel="noopener noreferrer" 
             className={`icon whatsapp-icon ${isAnimating ? 'pulse' : ''}`}
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-center md:text-end">
-            © {new Date().getFullYear()} Samix Tech. All rights reserved.
+            © {new Date().getFullYear()} EmmaTech. All rights reserved.
           </p>
         </div>
       </div>

@@ -29,8 +29,8 @@ const Hero = () => {
   const downloadResume = () => {
     // Create an anchor element to trigger download
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'SamixTech_Resume.pdf';
+    link.href = '/Resumes.pdf';
+    link.download = 'EmmaTech_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -79,7 +79,7 @@ const Hero = () => {
                   <div className="w-1/3">
                     <img 
                       src="/images/profile.jpg" 
-                      alt="Samson O" 
+                      alt="Emmanuel A" 
                       className="w-full h-full object-cover" 
                     />
                   </div>
@@ -103,10 +103,10 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10">
-              Hi, I'm SamixTech (Samson .O) — a passionate Software Engineer from Ondo, Nigeria.
+              Hi, I'm EmmaTech (Emmanuel .A) — a passionate Software Engineer from Lagos, Nigeria.
               My journey started with a deep curiosity for tech and creativity, which 
               led me into Frontend Development, 
-              then expanded into Fullstack Engineering, video editing, and design.
+              then expanded into Fullstack Engineering.
             </p>
 
             <div className="flex items-center gap-4 mt-2">
@@ -144,7 +144,7 @@ const Hero = () => {
             <div className="relative rounded-2xl overflow-hidden border-2 border-white/20 shadow-xl shadow-black/50 w-72 h-96">
               <img 
                 src="/images/profile.jpg" 
-                alt="Samson O" 
+                alt="Emmanuel A" 
                 className="w-full h-full object-cover" 
               />
               
@@ -153,7 +153,7 @@ const Hero = () => {
               
               {/* Name badge at bottom */}
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                <h3 className="text-white font-bold text-xl">Samson O.</h3>
+                <h3 className="text-white font-bold text-xl">Emmanuel A.</h3>
                 <p className="text-white-50 text-sm">Fullstack Engineer</p>
               </div>
             </div>
