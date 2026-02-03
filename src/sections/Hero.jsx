@@ -29,8 +29,8 @@ const Hero = () => {
   const downloadResume = () => {
     // Create an anchor element to trigger download
     const link = document.createElement('a');
-    link.href = '/Resumes.pdf';
-    link.download = 'EmmaTech_Resume.pdf';
+    link.href = '/Resume.pdf';
+    link.download = 'SamixTech_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -78,7 +78,7 @@ const Hero = () => {
                 <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-lg shadow-black/50 w-full flex">
                   <div className="w-1/3">
                     <img 
-                      src="/images/profile.jpg" 
+                      src="/images/profiles.jpg" 
                       alt="Samson O" 
                       className="w-full h-full object-cover" 
                     />
@@ -103,7 +103,7 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10">
-              Hi, I'm EmmaTech (Emmanuel .A) — a passionate Software Engineer from Lagos, Nigeria.
+              Hi, I'm SamixTech (Samson .O) — a passionate Software Engineer from Ondo, Nigeria.
               My journey started with a deep curiosity for tech and creativity, which 
               led me into Frontend Development, 
               then expanded into Fullstack Engineering, video editing, and design.
@@ -153,7 +153,7 @@ const Hero = () => {
               
               {/* Name badge at bottom */}
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                <h3 className="text-white font-bold text-xl">Emmanuel A.</h3>
+                <h3 className="text-white font-bold text-xl">Samson O.</h3>
                 <p className="text-white-50 text-sm">Fullstack Engineer</p>
               </div>
             </div>

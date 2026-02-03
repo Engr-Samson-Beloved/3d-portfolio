@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 const Footer = () => {
   // Social links data with URLs
   const socialLinks = [
-    { imgPath: socialImgs[0].imgPath, url: "https://www.instagram.com/style_withtife1/" },
-    { imgPath: socialImgs[1].imgPath, url: "https://github.com/emmy1472" },
-    { imgPath: socialImgs[2].imgPath, url: "https://x.com/emmycrushh" },
+    { imgPath: socialImgs[0].imgPath, url: "https://www.instagram.com/" },
+    { imgPath: socialImgs[1].imgPath, url: "https://github.com/" },
+    { imgPath: socialImgs[2].imgPath, url: "https://x.com/" },
     // Add more as needed
   ];
 
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-center md:text-end">
-            © {new Date().getFullYear()} EmmaTech. All rights reserved.
+            © {new Date().getFullYear()} SamixTech. All rights reserved.
           </p>
         </div>
       </div>
