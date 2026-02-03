@@ -95,7 +95,7 @@ const techStackImgs = [
     imgPath: "/images/logos/react.png",
   },
   {
-    name: "Django Developer",
+    name: "Next Developer",
     imgPath: "/images/logos/python.svg",
   },
   {
@@ -120,7 +120,7 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
-    name: "Django Developer",
+    name: "Next Developer",
     modelPath: "/models/python-transformed.glb",
     scale: 0.8,
     rotation: [0, 0, 0],
@@ -159,7 +159,7 @@ const expCards = [
     ],
   },
   {
-    review: "Tech Samix contributions to AWS web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review: "Tech Samix contributions to NigerChat web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
     title: "Full Stack Developer",
