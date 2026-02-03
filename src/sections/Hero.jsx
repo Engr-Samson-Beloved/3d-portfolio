@@ -143,7 +143,7 @@ const Hero = () => {
             {/* Image container with border effect */}
             <div className="relative rounded-2xl overflow-hidden border-2 border-white/20 shadow-xl shadow-black/50 w-72 h-96">
               <img 
-                src="/images/profiles.jpg" 
+                src="/images/profile.jpg" 
                 alt="Samson O" 
                 className="w-full h-full object-cover" 
               />
