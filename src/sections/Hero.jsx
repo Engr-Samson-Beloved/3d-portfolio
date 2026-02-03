@@ -85,7 +85,7 @@ const Hero = () => {
                   </div>
                   
                   <div className="w-2/3 p-3 bg-black/40 backdrop-blur-sm flex flex-col justify-center">
-                    <h3 className="text-white font-bold text-lg">Emmauel A.</h3>
+                    <h3 className="text-white font-bold text-lg">Samson O.</h3>
                     <p className="text-white-50 text-sm">Fullstack Engineer</p>
                     <button 
                       onClick={downloadResume}
