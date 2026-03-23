@@ -46,7 +46,40 @@ const Hero = () => {
         {/* LEFT: Hero Content */}
         <div className="md:w-3/5 w-full">
           <div className="flex flex-col gap-7">
-            <div className="hero-text">
+            <div className="relative md:hidden w-full h-[350px] mb-6 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
+              <img 
+                src="/images/profile.jpg" 
+                alt="Samson O" 
+                className="absolute inset-0 w-full h-full object-cover opacity-60" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+              
+              <div className="absolute inset-x-0 bottom-0 p-8 hero-text">
+                <h1 className="text-3xl font-bold leading-tight">
+                    Shaping
+                    <span className="slide block my-2 h-[40px]">
+                      <span className="wrapper">
+                        {words.map((word, index) => (
+                          <span
+                            key={index}
+                            className="flex items-center gap-2 pb-2 h-[40px]"
+                          >
+                            <img
+                              src={word.imgPath}
+                              alt="icon"
+                              className="size-6 p-1 rounded-full bg-white-50"
+                            />
+                            <span className="text-2xl">{word.text}</span>
+                          </span>
+                        ))}
+                      </span>
+                    </span>
+                    <span className="block mt-1">into Real Projects</span>
+                </h1>
+              </div>
+            </div>
+
+            <div className="hero-text hidden md:block">
               <h1>
                 Shaping
                 <span className="slide">
@@ -69,37 +102,6 @@ const Hero = () => {
               </h1>
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
-            </div>
-
-            {/* Mobile profile picture - only shows on small screens */}
-            <div className="md:hidden flex justify-center mb-4">
-              <div className="profile-container relative">
-                {/* Mobile optimized profile - horizontal card */}
-                <div className="relative rounded-xl overflow-hidden border-2 border-white/20 shadow-lg shadow-black/50 w-full flex">
-                  <div className="w-1/3">
-                    <img 
-                      src="/images/profiles.jpg" 
-                      alt="Samson O" 
-                      className="w-full h-full object-cover" 
-                    />
-                  </div>
-                  
-                  <div className="w-2/3 p-3 bg-black/40 backdrop-blur-sm flex flex-col justify-center">
-                    <h3 className="text-white font-bold text-lg">Samson O.</h3>
-                    <p className="text-white-50 text-sm">Fullstack Engineer</p>
-                    <button 
-                      onClick={downloadResume}
-                      className="resume-btn flex items-center gap-1 mt-2 px-3 py-1 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-md border border-white/30 hover:border-white/50 hover:shadow-sm hover:shadow-purple-500/20 transition-all w-fit"
-                      aria-label="Download Resume"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      <span className="text-white font-medium text-xs">Download CV</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10">

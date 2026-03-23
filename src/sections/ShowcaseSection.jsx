@@ -93,77 +93,79 @@ const ShowcaseSection = () => {
   };
 
   return (
-    <section id="work" ref={sectionRef} className="app-showcase py-24 md:py-36 bg-black">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="mb-20 text-center space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
+    <section id="work" ref={sectionRef} className="app-showcase py-16 md:py-36 bg-black">
+      <div className="max-w-7xl mx-auto px-5 md:px-12">
+        <div className="mb-12 md:mb-20 text-center space-y-4">
+            <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-white px-2">
                 Featured <span className="text-blue-500">Projects</span>
             </h1>
-            <p className="text-white-50 text-xl md:text-2xl max-w-3xl mx-auto font-light">
+            <p className="text-white-50 text-lg md:text-2xl max-w-3xl mx-auto font-light px-4">
                 Crafting digital experiences with precision and passion.
             </p>
         </div>
         
-        <div className="space-y-24">
+        <div className="space-y-12 md:space-y-24">
           {/* Main Project Card */}
           {projects.length > 0 && (
             <div 
               ref={(el) => (projectRefs.current[0] = el)} 
-              className="relative overflow-hidden rounded-[2.5rem] bg-black-100 border border-white/10 p-8 lg:p-12 group hover:border-white/20 transition-all duration-500"
+              className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-black-100 border border-white/10 p-5 md:p-12 group hover:border-white/20 transition-all duration-500"
             >
-              <div className="grid lg:grid-cols-5 gap-12 items-center">
-                <div className="lg:col-span-3 aspect-[16/10] md:aspect-[16/9] w-full shadow-2xl shadow-blue-500/10">
+              <div className="grid lg:grid-cols-5 gap-8 md:gap-12 items-center">
+                <div className="lg:col-span-3 aspect-[12/10] md:aspect-[16/9] w-full shadow-2xl shadow-blue-500/10 rounded-2xl overflow-hidden">
                   <ProjectImage images={projects[0].images} title={projects[0].title} />
                 </div>
-                <div className="lg:col-span-2 space-y-8">
-                  <div className="space-y-4">
-                    <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+                <div className="lg:col-span-2 space-y-6 md:space-y-8 py-2 md:py-0">
+                  <div className="space-y-3 md:space-y-4 text-center lg:text-left">
+                    <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
                         {projects[0].title}
                     </h2>
-                    <p className="text-white-50 text-lg lg:text-xl leading-relaxed font-light">
+                    <p className="text-white-50 text-base md:text-xl leading-relaxed font-light">
                         {projects[0].description}
                     </p>
                   </div>
-                  <button 
-                    onClick={() => openProject(projects[0].url)}
-                    className="group/btn relative px-8 py-4 bg-white text-black font-bold rounded-2xl overflow-hidden transition-transform active:scale-95"
-                  >
-                    <span className="relative z-10 flex items-center gap-2">
-                        Checkout Project
-                        <img src="/images/arrow-right.svg" className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" alt="arrow" />
-                    </span>
-                  </button>
+                  <div className="flex justify-center lg:justify-start">
+                    <button 
+                        onClick={() => openProject(projects[0].url)}
+                        className="group/btn relative w-full md:w-fit px-8 py-4 bg-white text-black font-bold rounded-2xl overflow-hidden transition-transform active:scale-95 text-center"
+                    >
+                        <span className="relative z-10 flex items-center justify-center gap-2">
+                            View Website
+                            <img src="/images/arrow-right.svg" className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" alt="arrow" />
+                        </span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           )}
 
           {/* Secondary Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10">
             {projects.slice(1).map((project, index) => (
               <div 
                 key={project.title}
                 ref={(el) => (projectRefs.current[index + 1] = el)}
-                className="group flex flex-col bg-black-100 rounded-[2rem] border border-white/10 overflow-hidden hover:border-white/20 shadow-xl transition-all duration-500 hover:-translate-y-2"
+                className="group flex flex-col bg-black-100 rounded-[2rem] border border-white/10 overflow-hidden hover:border-white/20 shadow-xl transition-all duration-500 md:hover:-translate-y-2"
               >
-                <div className="aspect-video relative overflow-hidden">
+                <div className="aspect-[16/10] relative overflow-hidden">
                   <ProjectImage images={project.images} title={project.title} />
                 </div>
-                <div className="p-10 flex flex-col flex-1 justify-between gap-8">
-                    <div className="space-y-4">
-                        <h3 className="text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                <div className="p-6 md:p-10 flex flex-col flex-1 justify-between gap-6 md:gap-8">
+                    <div className="space-y-3 md:space-y-4">
+                        <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">
                             {project.title}
                         </h3>
-                        <p className="text-white-50 text-lg line-clamp-3 leading-relaxed font-light">
+                        <p className="text-white-50 text-base md:text-lg line-clamp-3 leading-relaxed font-light">
                             {project.description}
                         </p>
                     </div>
                     <button 
                         onClick={() => openProject(project.url)}
-                        className="flex items-center gap-3 text-lg font-semibold text-white group/link"
+                        className="flex items-center gap-3 text-base md:text-lg font-semibold text-white group/link"
                     >
                         Learn more
-                        <div className="w-10 h-[1px] bg-white/20 transition-all group-hover/link:w-16 group-hover/link:bg-blue-400" />
+                        <div className="w-8 md:w-10 h-[1px] bg-white/20 transition-all group-hover/link:w-16 group-hover/link:bg-blue-400" />
                     </button>
                 </div>
               </div>
