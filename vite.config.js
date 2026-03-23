@@ -5,4 +5,12 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  optimizeDeps: {
+    include: [
+      "@react-three/fiber",
+      "three",
+      "@react-three/drei",
+      "use-sync-external-store/shim/with-selector",
+    ],
+  },
 });

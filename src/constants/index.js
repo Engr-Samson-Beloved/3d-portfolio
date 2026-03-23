@@ -29,9 +29,9 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
+  { value: 7, suffix: "+", label: "Years of Experience" },
+  { value: 30, suffix: "+", label: "Satisfied Clients" },
+  { value: 47, suffix: "+", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
@@ -263,6 +263,37 @@ const socialImgs = [
   },
 ];
 
+const projects = [
+  {
+    title: "Thrive Africa School",
+    description: "An educational platform dedicated to equipping young Africans with relevant tech skills. Offers courses in UI/UX, coding, and digital marketing with expert mentorship.",
+    images: ["/images/projects/thrive1.JPG", "/images/projects/thrive2.JPG", "/images/projects/thrive3.JPG"],
+    url: "https://thriveafricaschool.com",
+    bgColor: "#FFEFDB",
+  },
+  {
+    title: "CatfishXpress",
+    description: "A quick-service catfish cuisine restaurant offering fresh, smoked catfish prepared with traditional methods. Features rich and flavorful catfish soup.",
+    images: ["/images/projects/xfish1.PNG", "/images/projects/xfish2.PNG"],
+    url: "https://catfishxpress.com",
+    bgColor: "#FFE7EB",
+  },
+  {
+    title: "SmartaCore",
+    description: "Provides intelligent automation solutions for smart living, allowing users to control appliances, security, and lighting remotely via IoT devices.",
+    images: ["/images/projects/smart1.JPG", "/images/projects/smart2.JPG"],
+    url: "https://smartacore.com",
+    bgColor: "#FFEFDB",
+  },
+  {
+    title: "Truconn",
+    description: "A comprehensive digital tool for citizens to manage data privacy-related activities, including results, attendance, fee payments, and  resources.",
+    images: ["/images/projects/truceon1.JPG", "/images/projects/truceon2.JPG"],
+    url: "https://truconn.vercel.app",
+    bgColor: "#FFE7EB",
+  },
+];
+
 export {
   words,
   abilities,
@@ -274,5 +305,6 @@ export {
   socialImgs,
   techStackIcons,
   techStackImgs,
+  projects,
   navLinks,
 };
