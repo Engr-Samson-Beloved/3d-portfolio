@@ -266,31 +266,38 @@ const socialImgs = [
 const projects = [
   {
     title: "Thrive Africa School",
-    description: "An educational platform dedicated to equipping young Africans with relevant tech skills. Offers courses in UI/UX, coding, and digital marketing with expert mentorship.",
+    description: "An educational platform dedicated to equipping young Africans with relevant tech skills. Offers courses in UI/UX, coding, and digital marketing with expert mentorship. Built to foster a thriving ecosystem of tech talent across the continent.",
     images: ["/images/projects/thrive1.JPG", "/images/projects/thrive2.JPG", "/images/projects/thrive3.JPG"],
     url: "https://thriveafricaschool.com",
     bgColor: "#FFEFDB",
   },
   {
     title: "CatfishXpress",
-    description: "A quick-service catfish cuisine restaurant offering fresh, smoked catfish prepared with traditional methods. Features rich and flavorful catfish soup.",
+    description: "A premium quick-service restaurant offering authentic Nigerian catfish cuisine. Features fresh, smoked catfish prepared with traditional methods and premium quality ingredients for a delicious dining experience.",
     images: ["/images/projects/xfish1.PNG", "/images/projects/xfish2.PNG"],
     url: "https://catfishxpress.com",
     bgColor: "#FFE7EB",
   },
   {
     title: "SmartaCore",
-    description: "Provides intelligent automation solutions for smart living, allowing users to control appliances, security, and lighting remotely via IoT devices.",
+    description: "Intelligent home automation solutions for smart living. Control appliances, security, and lighting from anywhere. Features IoT-powered energy management and remote access control for modern spaces.",
     images: ["/images/projects/smart1.JPG", "/images/projects/smart2.JPG"],
     url: "https://smartacore.com",
     bgColor: "#FFEFDB",
   },
   {
-    title: "Truconn",
-    description: "A comprehensive digital tool for citizens to manage data privacy-related activities, including results, attendance, fee payments, and  resources.",
+    title: "Truconn (R3C0N-M3)",
+    description: "A robust Authentication API featuring secure access with JWT tokens, OTP email verification, and Google authentication. Provides developer-friendly endpoints for scalable and secure web applications.",
     images: ["/images/projects/truceon1.JPG", "/images/projects/truceon2.JPG"],
     url: "https://truconn.vercel.app",
     bgColor: "#FFE7EB",
+  },
+  {
+    title: "World Thunder Ministry",
+    description: "Dedicated to Christian education and spiritual training. Features the Theological College (OTC) for certificate and diploma courses in Bible doctrine and practical ministry to equip individuals for service.",
+    images: ["/images/projects/world-thunder-splash.png"],
+    url: "https://worldthunderministry.com",
+    bgColor: "#FFEFDB",
   },
 ];
 
