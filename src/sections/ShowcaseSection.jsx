@@ -96,9 +96,9 @@ const ShowcaseSection = () => {
     <section id="work" ref={sectionRef} className="app-showcase py-16 md:py-36 bg-black">
       <div className="max-w-7xl mx-auto px-5 md:px-12">
         <div className="mb-12 md:mb-20 text-center space-y-4">
-            <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-white px-2">
+            <h2 className="text-4xl md:text-7xl font-bold tracking-tight text-white px-2">
                 Featured <span className="text-blue-500">Projects</span>
-            </h1>
+            </h2>
             <p className="text-white-50 text-lg md:text-2xl max-w-3xl mx-auto font-light px-4">
                 Crafting digital experiences with precision and passion.
             </p>
