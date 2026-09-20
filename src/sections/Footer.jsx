@@ -23,7 +23,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="footer">
+    <footer className="footer !mt-8 !my-0">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
           <p>Terms & Conditions</p>

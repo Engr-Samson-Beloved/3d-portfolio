@@ -104,10 +104,11 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10">
-              Hi, I'm SamixTech (Samson O.) — a Full-Stack & Application Engineer from Ondo, Nigeria.
-              I build real products and application systems: interfaces, backend
-              services, realtime communication, automation and AI agents — designed
-              to plug into what already exists, not replace it.
+              Hi, I'm SamixTech (Samson O.) — a Full-Stack & Application Engineer
+              from Ondo, Nigeria, and Founder of SkoolConnectNG. I build real
+              products and application systems: interfaces, backend services,
+              realtime communication, automation and AI agents — designed to
+              plug into what already exists, not replace it.
             </p>
 
             <div className="flex items-center gap-4 mt-2">

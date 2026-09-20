@@ -1,54 +1,40 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import TitleHeader from "../components/TitleHeader";
 import { whatISolve } from "../constants";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const WhatISolve = () => {
+const WhatISolve = ({ isActive = true }) => {
   useGSAP(() => {
-    gsap.utils.toArray(".solve-card").forEach((card) => {
-      gsap.fromTo(
-        card,
-        { y: 40, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=60",
-          },
-        }
-      );
-    });
-  }, []);
+    if (!isActive) return;
+
+    gsap.fromTo(
+      ".solve-row",
+      { y: 16, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, stagger: 0.08, ease: "power2.out" }
+    );
+  }, [isActive]);
 
   return (
-    <section id="what-i-solve" className="flex-center section-padding">
+    <section id="solve" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
           title="How I Turn Problems Into Products"
           sub="🧩 What I Solve"
         />
-        <div className="grid md:grid-cols-2 gap-6 mt-16">
+        <div className="flex flex-col gap-3 mt-8 max-w-4xl mx-auto w-full">
           {whatISolve.map((item, index) => (
             <div
               key={index}
-              className="solve-card card-border rounded-xl p-8 flex flex-col gap-4"
+              className="solve-row card-border rounded-lg px-5 py-3.5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4"
             >
-              <p className="text-blue-50 text-sm uppercase tracking-wide font-semibold">
-                Problem
+              <p className="text-white-50 text-sm sm:text-base flex-1">
+                {item.problem}
               </p>
-              <p className="text-white-50 text-lg">{item.problem}</p>
-              <div className="w-10 h-[2px] bg-white/20" />
-              <p className="text-blue-50 text-sm uppercase tracking-wide font-semibold">
-                Solution I Provide
+              <div className="hidden sm:block w-8 h-[1px] bg-white/20 shrink-0" />
+              <p className="text-white text-sm sm:text-base font-medium flex-1">
+                {item.solution}
               </p>
-              <p className="text-white text-lg font-medium">{item.solution}</p>
             </div>
           ))}
         </div>

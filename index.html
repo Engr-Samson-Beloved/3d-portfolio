@@ -8,8 +8,8 @@
     <!-- Primary Meta Tags -->
     <title>Owooluwa Samson Olabanji | Full-Stack & Application Engineer</title>
     <meta name="title" content="Owooluwa Samson Olabanji | Full-Stack & Application Engineer" />
-    <meta name="description" content="Portfolio of Owooluwa Samson Olabanji (SamixTech), a Full-Stack & Application Engineer building real products: React/Next.js interfaces, Node.js backends, realtime systems, AI agents and automation." />
-    <meta name="keywords" content="Samson Olabanji, SamixTech, Full-Stack Engineer, Application Engineer, React Developer, Next.js, AI Agents, Automation, Rust, Tauri, Web Development Nigeria" />
+    <meta name="description" content="Portfolio of Owooluwa Samson Olabanji (SamixTech), a Full-Stack & Application Engineer and Founder of SkoolConnectNG, building real products: React/Next.js interfaces, Node.js backends, realtime systems, AI agents and automation." />
+    <meta name="keywords" content="Samson Olabanji, Owooluwa Samson Olabanji, SamixTech, SkoolConnectNG, Founder, Full-Stack Engineer, Application Engineer, React Developer, Next.js, AI Agents, Automation, Rust, Tauri, Web Development Nigeria" />
     <meta name="author" content="Owooluwa Samson Olabanji" />
 
     <!-- Open Graph / Facebook -->
@@ -28,6 +28,37 @@
 
     <!-- Canonical Link -->
     <link rel="canonical" href="https://techsamix.name.ng/" />
+
+    <!-- Structured Data: Person + Founder relationship (SkoolConnectNG) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://techsamix.name.ng/#person",
+            "name": "Owooluwa Samson Olabanji",
+            "alternateName": "SamixTech",
+            "url": "https://techsamix.name.ng/",
+            "image": "https://techsamix.name.ng/images/profile.jpg",
+            "jobTitle": "Full-Stack & Application Engineer",
+            "nationality": "Nigerian",
+            "sameAs": [
+              "https://github.com/engr-samson-beloved",
+              "https://instagram.com/techsamix",
+              "https://x.com/techsamix"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://techsamix.name.ng/#skoolconnectng",
+            "name": "SkoolConnectNG",
+            "description": "A social education and networking platform connecting Nigerian students, aspirants and alumni.",
+            "founder": { "@id": "https://techsamix.name.ng/#person" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

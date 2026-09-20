@@ -187,10 +187,10 @@ const recentWork = [
   },
   {
     title: "SkoolConnectNG",
-    category: "Social Education Platform",
+    category: "Founder — Social Education Platform",
     description:
-      "A real-world student networking platform connecting Nigerian students, aspirants and alumni — spanning authentication, profiles, communities, resources, messaging, notifications and realtime experiences.",
-    tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Realtime", "Vercel"],
+      "A real-world student networking platform I founded, connecting Nigerian students, aspirants and alumni — spanning authentication, profiles, communities, resources, messaging, notifications and realtime experiences.",
+    tags: ["Founder", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Realtime"],
   },
 ];
 

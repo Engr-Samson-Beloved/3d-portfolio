@@ -1,29 +1,12 @@
-import Footer from "./sections/Footer";
-import Contact from "./sections/Contact";
-import TechStack from "./sections/TechStack";
-import Experience from "./sections/Experience";
-import Hero from "./sections/Hero";
-import ShowcaseSection from "./sections/ShowcaseSection";
-import LogoShowcase from "./sections/LogoShowcase";
-import FeatureCards from "./sections/FeatureCards";
-import WhatISolve from "./sections/WhatISolve";
-import RecentWork from "./sections/RecentWork";
-import Navbar from "./components/NavBar";
+import { useMediaQuery } from "react-responsive";
 
-const App = () => (
-  <>
-    <Navbar />
-    <Hero />
-    <WhatISolve />
-    <ShowcaseSection />
-    <LogoShowcase />
-    <RecentWork />
-    <FeatureCards />
-    <Experience />
-    <TechStack />
-    <Contact />
-    <Footer />
-  </>
-);
+import SlidesApp from "./sections/SlidesApp";
+import ScrollApp from "./sections/ScrollApp";
+
+const App = () => {
+  const isDesktop = useMediaQuery({ minWidth: 768 });
+
+  return isDesktop ? <SlidesApp /> : <ScrollApp />;
+};
 
 export default App;

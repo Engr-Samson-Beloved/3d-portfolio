@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/models/contact/ContactExperience";
 
-const Contact = () => {
+const Contact = ({ isActive = true }) => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
@@ -46,10 +46,10 @@ const Contact = () => {
           title="Get in Touch – Let’s Connect"
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
         />
-        <div className="grid-12-cols mt-16">
+        <div className="grid-12-cols mt-8">
           <div className="xl:col-span-5">
-            <div className="flex flex-col gap-7 card-border rounded-xl p-10">
-              <div className="flex flex-wrap gap-3 pb-7 border-b border-black-50">
+            <div className="flex flex-col gap-5 card-border rounded-xl p-6">
+              <div className="flex flex-wrap gap-2 pb-5 border-b border-black-50">
                 <a
                   href="mailto:samsonowooluwa@gmail.com"
                   className="text-sm px-4 py-2 rounded-full bg-black-200 text-white-50 border border-black-50 hover:border-white/30 transition-colors"
@@ -74,7 +74,7 @@ const Contact = () => {
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="w-full flex flex-col gap-7"
+                className="w-full flex flex-col gap-4"
               >
                 <div>
                   <label htmlFor="name">Your name</label>
@@ -110,7 +110,7 @@ const Contact = () => {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="How can I help you?"
-                    rows="5"
+                    rows="3"
                     required
                   />
                 </div>
@@ -129,9 +129,9 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="xl:col-span-7 min-h-96">
+          <div className="xl:col-span-7 min-h-72">
             <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+              {isActive && <ContactExperience />}
             </div>
           </div>
         </div>

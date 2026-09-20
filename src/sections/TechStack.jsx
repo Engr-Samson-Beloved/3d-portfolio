@@ -4,36 +4,17 @@ import gsap from "gsap";
 import TitleHeader from "../components/TitleHeader";
 import TechIconCardExperience from "../components/models/tech_logos/TechIconCardExperience";
 import { techStackIcons, engineeringToolbox } from "../constants";
-// import { techStackImgs } from "../constants";
 
-const TechStack = () => {
-  // Animate the tech cards in the skills section
+const TechStack = ({ isActive = true }) => {
   useGSAP(() => {
-    // This animation is triggered when the user scrolls to the #skills wrapper
-    // The animation starts when the top of the wrapper is at the center of the screen
-    // The animation is staggered, meaning each card will animate in sequence
-    // The animation ease is set to "power2.inOut", which is a slow-in fast-out ease
+    if (!isActive) return;
+
     gsap.fromTo(
       ".tech-card",
-      {
-        // Initial values
-        y: 50, // Move the cards down by 50px
-        opacity: 0, // Set the opacity to 0
-      },
-      {
-        // Final values
-        y: 0, // Move the cards back to the top
-        opacity: 1, // Set the opacity to 1
-        duration: 1, // Duration of the animation
-        ease: "power2.inOut", // Ease of the animation
-        stagger: 0.2, // Stagger the animation by 0.2 seconds
-        scrollTrigger: {
-          trigger: "#skills", // Trigger the animation when the user scrolls to the #skills wrapper
-          start: "top center", // Start the animation when the top of the wrapper is at the center of the screen
-        },
-      }
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.7, ease: "power2.out", stagger: 0.12 }
     );
-  });
+  }, [isActive]);
 
   return (
     <div id="skills" className="flex-center section-padding">
@@ -43,69 +24,44 @@ const TechStack = () => {
           sub="🤝 What I Bring to the Table"
         />
         <div className="tech-grid">
-          {/* Loop through the techStackIcons array and create a component for each item. 
-              The key is set to the name of the tech stack icon, and the classnames are set to 
-              card-border, tech-card, overflow-hidden, and group. The xl:rounded-full and rounded-lg 
-              classes are only applied on larger screens. */}
           {techStackIcons.map((techStackIcon) => (
             <div
               key={techStackIcon.name}
               className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
             >
-              {/* The tech-card-animated-bg div is used to create a background animation when the 
-                  component is hovered. */}
               <div className="tech-card-animated-bg" />
               <div className="tech-card-content">
-                {/* The tech-icon-wrapper div contains the TechIconCardExperience component, 
-                    which renders the 3D model of the tech stack icon. */}
                 <div className="tech-icon-wrapper">
-                  <TechIconCardExperience model={techStackIcon} />
+                  {isActive ? (
+                    <TechIconCardExperience model={techStackIcon} />
+                  ) : (
+                    <div className="w-full h-full" />
+                  )}
                 </div>
-                {/* The padding-x and w-full classes are used to add horizontal padding to the 
-                    text and make it take up the full width of the component. */}
                 <div className="padding-x w-full">
-                  {/* The p tag contains the name of the tech stack icon. */}
                   <p>{techStackIcon.name}</p>
                 </div>
               </div>
             </div>
           ))}
-
-          {/* This is for the img part */}
-          {/* {techStackImgs.map((techStackIcon, index) => (
-            <div
-              key={index}
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
-            >
-              <div className="tech-card-animated-bg" />
-              <div className="tech-card-content">
-                <div className="tech-icon-wrapper">
-                  <img src={techStackIcon.imgPath} alt="" />
-                </div>
-                <div className="padding-x w-full">
-                  <p>{techStackIcon.name}</p>
-                </div>
-              </div>
-            </div>
-          ))} */}
         </div>
 
-        <div className="mt-24">
-          <p className="text-center text-blue-50 uppercase tracking-wide text-sm font-semibold mb-10">
+        <div className="mt-14">
+          <p className="text-center text-blue-50 uppercase tracking-wide text-sm font-semibold mb-6">
             Full Engineering Toolbox
           </p>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-4">
             {engineeringToolbox.map(({ category, skills }) => (
               <div
                 key={category}
-                className="card-border rounded-xl p-6 flex flex-col gap-4"
+                className="card-border rounded-lg p-4 flex flex-col gap-2.5"
               >
-                <p className="text-white font-semibold text-lg">{category}</p>
-                <div className="flex flex-wrap gap-2">
+                <p className="text-white font-semibold text-sm">{category}</p>
+                <div className="flex flex-wrap gap-1.5">
                   {skills.map((skill) => (
                     <span
                       key={skill}
-                      className="text-sm px-3 py-1.5 rounded-full bg-black-200 text-white-50 border border-black-50"
+                      className="text-[11px] px-2.5 py-1 rounded-full bg-black-200 text-white-50 border border-black-50"
                     >
                       {skill}
                     </span>
