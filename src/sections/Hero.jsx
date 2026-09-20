@@ -1,7 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
 import { words } from "../constants";
 
@@ -105,17 +104,17 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10">
-              Hi, I'm SamixTech (Samson .O) — a passionate Software Engineer from Ondo, Nigeria.
-              My journey started with a deep curiosity for tech and creativity, which 
-              led me into Frontend Development, 
-              then expanded into Fullstack Engineering, video editing, and design.
+              Hi, I'm SamixTech (Samson O.) — a Full-Stack & Application Engineer from Ondo, Nigeria.
+              I build real products and application systems: interfaces, backend
+              services, realtime communication, automation and AI agents — designed
+              to plug into what already exists, not replace it.
             </p>
 
             <div className="flex items-center gap-4 mt-2">
               <Button
                 text="See My Work"
                 className="md:w-60 md:h-14 w-48 h-12 relative overflow-hidden group"
-                id="counter"
+                id="work"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
               </Button>
@@ -156,14 +155,12 @@ const Hero = () => {
               {/* Name badge at bottom */}
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
                 <h3 className="text-white font-bold text-xl">Samson O.</h3>
-                <p className="text-white-50 text-sm">Fullstack Engineer</p>
+                <p className="text-white-50 text-sm">Full-Stack & Application Engineer</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <AnimatedCounter />
     </section>
   );
 };

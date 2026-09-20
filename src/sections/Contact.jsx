@@ -48,7 +48,29 @@ const Contact = () => {
         />
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
+            <div className="flex flex-col gap-7 card-border rounded-xl p-10">
+              <div className="flex flex-wrap gap-3 pb-7 border-b border-black-50">
+                <a
+                  href="mailto:samsonowooluwa@gmail.com"
+                  className="text-sm px-4 py-2 rounded-full bg-black-200 text-white-50 border border-black-50 hover:border-white/30 transition-colors"
+                >
+                  ✉️ samsonowooluwa@gmail.com
+                </a>
+                <a
+                  href="tel:+2348116060517"
+                  className="text-sm px-4 py-2 rounded-full bg-black-200 text-white-50 border border-black-50 hover:border-white/30 transition-colors"
+                >
+                  📞 +234 811 606 0517
+                </a>
+                <a
+                  href="https://github.com/engr-samson-beloved"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm px-4 py-2 rounded-full bg-black-200 text-white-50 border border-black-50 hover:border-white/30 transition-colors"
+                >
+                  🖥️ github.com/engr-samson-beloved
+                </a>
+              </div>
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}

@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 import TitleHeader from "../components/TitleHeader";
 import TechIconCardExperience from "../components/models/tech_logos/TechIconCardExperience";
-import { techStackIcons } from "../constants";
+import { techStackIcons, engineeringToolbox } from "../constants";
 // import { techStackImgs } from "../constants";
 
 const TechStack = () => {
@@ -88,6 +88,32 @@ const TechStack = () => {
               </div>
             </div>
           ))} */}
+        </div>
+
+        <div className="mt-24">
+          <p className="text-center text-blue-50 uppercase tracking-wide text-sm font-semibold mb-10">
+            Full Engineering Toolbox
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {engineeringToolbox.map(({ category, skills }) => (
+              <div
+                key={category}
+                className="card-border rounded-xl p-6 flex flex-col gap-4"
+              >
+                <p className="text-white font-semibold text-lg">{category}</p>
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="text-sm px-3 py-1.5 rounded-full bg-black-200 text-white-50 border border-black-50"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

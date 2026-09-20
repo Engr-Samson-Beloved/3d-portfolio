@@ -4,9 +4,8 @@ import { useState, useEffect } from "react";
 const Footer = () => {
   // Social links data with URLs
   const socialLinks = [
-    { imgPath: socialImgs[0].imgPath, url: "https://www.instagram.com/" },
-    { imgPath: socialImgs[1].imgPath, url: "https://github.com/" },
-    { imgPath: socialImgs[2].imgPath, url: "https://x.com/" },
+    { imgPath: socialImgs[0].imgPath, url: "https://instagram.com/techsamix" },
+    { imgPath: socialImgs[1].imgPath, url: "https://x.com/techsamix" },
     // Add more as needed
   ];
 
@@ -30,23 +29,40 @@ const Footer = () => {
           <p>Terms & Conditions</p>
         </div>
         <div className="socials">
+          {/* GitHub */}
+          <a
+            href="https://github.com/engr-samson-beloved"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 496 512"
+              className="w-5 h-5"
+              fill="#ffffff"
+            >
+              <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-33.9 0 0-14.8-8.7-1-8.7 0 0 15.3 1 23.7 15.8 12.8 23.1 34.3 16.6 42.6 12.6 1.3-9.7 5.3-16.6 9.7-20.4-33.9-3.6-68.1-8.7-68.1-68.1 0-15 5.3-27.5 14-37.2-1.5-3.7-6.5-19.1 1.4-39.7 0 0 11.4-3.7 37.5 14.4 10.9-3 22.5-4.5 34-4.5s23.2 1.5 34 4.5c26.1-18.4 37.5-14.4 37.5-14.4 7.9 20.6 2.9 36 1.4 39.7 8.7 9.7 14 22.1 14 37.2 0 59.7-34.5 64.4-68.4 68.1 5.4 4.7 9.7 13.8 9.7 27.8 0 20.1-.3 60.6-.3 60.6 0 6.4 4.5 14.4 17.3 12.1C426.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/>
+            </svg>
+          </a>
+
           {socialLinks.map((social, index) => (
-            <a 
-              key={index} 
-              href={social.url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="icon"
             >
               <img src={social.imgPath} alt="social icon" />
             </a>
           ))}
-          
+
           {/* WhatsApp Icon with Animation */}
-          <a 
-            href="http://wa.me/+2349169771575" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://wa.me/2348116060517"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`icon whatsapp-icon ${isAnimating ? 'pulse' : ''}`}
           >
             <svg 
@@ -67,7 +83,7 @@ const Footer = () => {
       </div>
 
       {/* Add CSS for the animation */}
-      <style jsx>{`
+      <style>{`
         .whatsapp-icon {
           transition: transform 0.3s ease;
         }

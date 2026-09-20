@@ -4,16 +4,16 @@ const navLinks = [
     link: "#work",
   },
   {
+    name: "Recent Builds",
+    link: "#recent-work",
+  },
+  {
     name: "Experience",
     link: "#experience",
   },
   {
     name: "Skills",
     link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
   },
 ];
 
@@ -26,13 +26,6 @@ const words = [
   { text: "Concepts", imgPath: "/images/concepts.svg" },
   { text: "Designs", imgPath: "/images/designs.svg" },
   { text: "Code", imgPath: "/images/code.svg" },
-];
-
-const counterItems = [
-  { value: 7, suffix: "+", label: "Years of Experience" },
-  { value: 30, suffix: "+", label: "Satisfied Clients" },
-  { value: 47, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
 const logoIconsList = [
@@ -95,11 +88,7 @@ const techStackImgs = [
     imgPath: "/images/logos/react.png",
   },
   {
-    name: "Next Developer",
-    imgPath: "/images/logos/python.svg",
-  },
-  {
-    name: "Backend Developer",
+    name: "Backend Engineer",
     imgPath: "/images/logos/node.png",
   },
   {
@@ -107,7 +96,7 @@ const techStackImgs = [
     imgPath: "/images/logos/three.png",
   },
   {
-    name: "Project Manager",
+    name: "Version Control",
     imgPath: "/images/logos/git.svg",
   },
 ];
@@ -120,13 +109,7 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
-    name: "Next Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Backend Developer",
+    name: "Backend Engineer",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
@@ -138,10 +121,107 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
-    name: "Project Manager",
+    name: "Version Control",
     modelPath: "/models/git-svg-transformed.glb",
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
+  },
+];
+
+const whatISolve = [
+  {
+    problem: "A website needs a new capability without a full rebuild.",
+    solution:
+      "Plugin-and-play features: modular components/services designed to integrate into an existing site or product.",
+  },
+  {
+    problem: "Teams need automation beyond simple forms and dashboards.",
+    solution:
+      "Agents and workflow automation that connect APIs, tools and actions into practical workflows.",
+  },
+  {
+    problem: "Users need to interact with products through familiar channels.",
+    solution:
+      "Conversational and messaging experiences, including WhatsApp-agent workflows.",
+  },
+  {
+    problem: "Creative teams need motion without rebuilding everything manually.",
+    solution:
+      "Web-based motion design tooling and programmatic video/motion workflows using Remotion.",
+  },
+  {
+    problem: "Products need intelligent assistance.",
+    solution:
+      "Agent-based application experiences such as Samix Agent, with modular tools and extensible capabilities.",
+  },
+];
+
+const recentWork = [
+  {
+    title: "Samix Agent",
+    category: "AI Agent / Application Architecture",
+    description:
+      "An agent-focused system built around extensibility rather than a single fixed capability — a modular tool/plugin architecture so capabilities can be added without rewriting the core.",
+    tags: ["Agent Architecture", "Tools/Plugins", "Automation", "Extensibility"],
+  },
+  {
+    title: "WhatsApp Agent",
+    category: "Conversational Automation",
+    description:
+      "A practical agent experience focused on bringing automation into a channel people already use. Built with Tauri Dev and Rust as part of exploring more capable, system-level application development.",
+    tags: ["Tauri Dev", "Rust", "Agents", "Messaging", "Automation"],
+  },
+  {
+    title: "Web Motion Design App",
+    category: "Creative Engineering / Web App",
+    description:
+      "A motion design application that runs on the web, combining application engineering with a background in motion design — turning a creative workflow into a usable software product.",
+    tags: ["Web Application", "Motion Design", "Creative Tooling"],
+  },
+  {
+    title: "Remotion Design",
+    category: "Programmatic Motion / Video",
+    description:
+      "Exploring Remotion as an engineering tool for creating dynamic motion and video experiences programmatically — connecting design, code and automation.",
+    tags: ["Remotion", "React", "Programmatic Video"],
+  },
+  {
+    title: "SkoolConnectNG",
+    category: "Social Education Platform",
+    description:
+      "A real-world student networking platform connecting Nigerian students, aspirants and alumni — spanning authentication, profiles, communities, resources, messaging, notifications and realtime experiences.",
+    tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Realtime", "Vercel"],
+  },
+];
+
+const engineeringToolbox = [
+  {
+    category: "Application",
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "PWA / Cross-platform"],
+  },
+  {
+    category: "Backend",
+    skills: ["Node.js", "REST APIs", "Supabase", "PostgreSQL", "MongoDB"],
+  },
+  {
+    category: "Realtime",
+    skills: ["Realtime Messaging", "Notifications", "Event-driven Flows"],
+  },
+  {
+    category: "AI / Agents",
+    skills: ["Agent Systems", "Tool/Plugin Architecture", "Automation", "LLM App Exploration"],
+  },
+  {
+    category: "Systems",
+    skills: ["Rust", "Tauri", "API Integration", "Modular Services"],
+  },
+  {
+    category: "Creative Tech",
+    skills: ["Remotion", "GSAP", "Framer Motion", "SVG", "Web-based Motion Tooling"],
+  },
+  {
+    category: "Cloud / Delivery",
+    skills: ["Vercel", "AWS", "Git", "Deployment Workflows"],
   },
 ];
 
@@ -199,67 +279,14 @@ const expLogos = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Charle's Visuals",
-    mentions: "@estherhoward",
-    review:
-      "I can’t say enough good things about SamixTech. He was able to take our complex church media project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: "/images/client1.png",
-  },
-  {
-    name: "Olu charles",
-    mentions: "@wadewarren",
-    review:
-      "Working with Samix was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
-  },
-  {
-    name: "Niles Gideon",
-    mentions: "@guyhawkins",
-    review:
-      "Collaborating with SamixTech was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: "/images/client2.png",
-  },
-  {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "Olabanji. E, was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
-  },
-  {
-    name: "Olajide Gloria",
-    mentions: "@floydmiles",
-    review:
-      "Samix expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Samson,Olabanji was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
-  },
-];
-
 const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
   },
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
     name: "x",
     imgPath: "/images/x.png",
-  },
-  {
-    name: "linkedin",
-    imgPath: "/images/linkedin.png",
   },
 ];
 
@@ -305,13 +332,14 @@ export {
   words,
   abilities,
   logoIconsList,
-  counterItems,
   expCards,
   expLogos,
-  testimonials,
   socialImgs,
   techStackIcons,
   techStackImgs,
   projects,
   navLinks,
+  whatISolve,
+  recentWork,
+  engineeringToolbox,
 };
